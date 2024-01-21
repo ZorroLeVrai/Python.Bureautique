@@ -1,4 +1,4 @@
-numero = float(input("Entrez la numéro: "))
+numero = float(input("Entrez le numéro: "))
 match numero:
     case 1:
         print("Un")
