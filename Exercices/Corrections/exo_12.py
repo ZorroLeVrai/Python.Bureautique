@@ -2,7 +2,8 @@ import os.path
 import csv
 
 nom_fichier = "produit.csv"
-delimiteur_csv = ";"
+delimiteur_csv = ","
+
 
 def ajouter_produit(titre, prix, stock):
     """Ajout d'un produit dans le fichier CSV"""
@@ -13,6 +14,7 @@ def ajouter_produit(titre, prix, stock):
         if not fichier_existe:
             csv_writer.writerow(["Titre", "Prix", "Quantité"])
         csv_writer.writerow([titre, prix, stock])
+
 
 titre = input("Entrez le nom du produit: ")
 prix = float(input("Entrez le prix du produit: "))
