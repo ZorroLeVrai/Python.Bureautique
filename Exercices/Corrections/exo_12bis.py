@@ -22,7 +22,7 @@ def ajouter_produit(titre, prix, stock):
         df = pd.read_csv(nom_fichier, dtype=data_types, encoding=FILE_ENCODING)
         df = pd.concat([df, pd.DataFrame(new_data_row)], ignore_index=True)
     else:
-        df = pd.DataFrame(new_data_row)  # , dtype=data_types)
+        df = pd.DataFrame(data=new_data_row).astype(dtype=data_types)
 
     if df is not None:
         df.to_csv(nom_fichier, index=False, encoding=FILE_ENCODING)
