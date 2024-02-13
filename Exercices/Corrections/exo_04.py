@@ -1,5 +1,5 @@
 temp = float(input("Entrez la température de l'eau: "))
-#etat_eau = ""
+
 if temp < 0:
     etat_eau = "solide"
 elif temp <= 100:
