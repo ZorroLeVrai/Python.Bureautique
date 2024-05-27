@@ -1,2 +1,3 @@
 age = float(input("Saisir l'age: "))
-print(age >= 18)
+estMajeur = age >= 18
+print("Vrai" if estMajeur else "Faux")
