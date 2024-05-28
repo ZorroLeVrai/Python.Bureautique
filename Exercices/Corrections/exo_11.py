@@ -23,9 +23,12 @@ def saisir_notes():
         note = saisir_une_note()
         if note < 0:
             break
-
-        note_minimale = note if note < note_minimale else note_minimale
-        note_maximale = note if note > note_maximale else note_maximale
+        
+        if note < note_minimale:
+            note_minimale = note
+        if note > note_maximale:
+            note_maximale = note
+        
         somme_notes += note
         nb_notes += 1
 
