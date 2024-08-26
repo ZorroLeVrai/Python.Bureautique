@@ -10,3 +10,5 @@ class Enfant(Personne):
         self.jouet = jouet
 
 nicolas = Enfant("Doe", "John", 8, "Camion")
+# Nom: John Doe; Age: 8; Jouet: Camion
+print(f"Nom: {nicolas.prenom} {nicolas.nom}; Age: {nicolas.age}; Jouet: {nicolas.jouet}")
