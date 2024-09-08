@@ -1,3 +1,4 @@
+# Créez une liste contenant des marques de voitures
 liste_voiture = []
 liste_non_terminee = True
 while liste_non_terminee:

@@ -1,3 +1,4 @@
+# Calculez la somme d'une liste
 liste_prix = [15.2,2.7,11.3]
 
 somme_prix= 0

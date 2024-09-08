@@ -1,3 +1,4 @@
+# Unifiez 2 listes d'invités
 # Définir les deux listes d'invités (les listes d'invités sont définies en tant que set)
 set_A = {"Alice", "Bob", "Charlie", "David", "Emma"}
 set_B = {"Bob", "David", "Fiona", "George", "Alice"}
