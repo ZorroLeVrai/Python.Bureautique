@@ -7,4 +7,4 @@ elif temp <= 100:
 else:
     etat_eau = "gazeux"
 
-print(f"Etat {etat_eau}")
+print("Etat", etat_eau)
