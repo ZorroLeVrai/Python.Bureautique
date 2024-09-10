@@ -1,4 +1,5 @@
 import datetime
+
 weekday = datetime.datetime.today().weekday()
 jour_semaine = ""
 match weekday:
