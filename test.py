@@ -1,4 +1,7 @@
-liste1 = { "Arthur", "Toto", "Jane" }
-liste2 = { "John", 'Arthur' }
+data = {'Colonne1': [1, 2, 3], 'Colonne2': ['A', 'B', 'C']}
 
-print(liste1.intersection(liste2))
+print("data.values", data.values())
+print("[*data.values]", [*data.values()])
+for row in zip(*data.values()):
+    print((row))
+    
