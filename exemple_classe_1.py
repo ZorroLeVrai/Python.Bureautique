@@ -3,7 +3,7 @@ class Person:
         self.prenom = prenom
         self.nom = nom
         self.date_naissance = date_naissance
-
+        
 
 def afficher_informations(personne_data):
     print(f"Prénom: {personne_data.prenom}")
@@ -15,6 +15,8 @@ def afficher_informations(personne_data):
 personne = Person("John", "Doe", "01/01/2001")
 personne2 = Person("Jane", "Doe", "22/22/2012")
 
-afficher_informations(personne)
-print()
-afficher_informations(personne2)
+print(int(personne))
+
+# afficher_informations(personne)
+# print()
+# afficher_informations(personne2)

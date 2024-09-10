@@ -9,15 +9,20 @@ class Piece:
 
     def dimension(self):
         return f"largeur={self.largeur}, longeur:{self.longueur}"
+    
+    def __repr__(self) -> str:
+        return f"[{self.nom} ({self.largeur} X {self.longueur})]"
 
 
-chambre = Piece("chambre 1", 2.9, 3.1)
-salon = Piece("salon", 3, 5)
 
-print(chambre.nom)
-print(chambre.surface())
-print(chambre.dimension())
+if __name__ == "__main__":
+    chambre = Piece("chambre 1", 2.9, 3.1)
+    salon = Piece("salon", 3, 5)
 
-print(salon.nom)
-print(salon.surface())
-print(salon.dimension())
+    print(chambre.nom)
+    print(chambre.surface())
+    print(chambre.dimension())
+
+    print(salon.nom)
+    print(salon.surface())
+    print(salon.dimension())
