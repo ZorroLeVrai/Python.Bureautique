@@ -1,2 +1,7 @@
-def test_calculer_taxe():
-    assert calculer_taxe(100) == 20  # Montre que 100 doit donner 20 de taxe
+import os
+
+repertoire = r"C:\Users\Amine"
+fichier = "text.txt"
+
+chemin_complet = os.path.join(repertoire, fichier)
+print(chemin_complet)
