@@ -5,7 +5,7 @@ def calcul_pret_immobilier(mortgage, rate, payment, nb_month):
     principal = mortgage
     for _ in range(0, nb_month):
         interest = principal * rate /12
-        principal -= payment - interest
+        principal = principal - payment + interest
     return principal
 
 #recherche de la mensualité pour le paiement du prêt immobilier

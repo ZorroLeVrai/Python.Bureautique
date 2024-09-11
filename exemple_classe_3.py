@@ -1,3 +1,4 @@
+#TODO: A supprimer - le fichier a été copié dans exo_13_3.py
 from exemple_classe_2 import Piece
 
 class Appartement:

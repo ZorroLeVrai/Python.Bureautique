@@ -1,4 +1,3 @@
-#TODO: A supprimer - le fichier a été copié dans exo_07_3.py
 salaires = [15000, 17500, 12000, 27000, 19500]
 
 AUGMENTATION_TAUX = 0.05
