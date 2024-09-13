@@ -114,5 +114,6 @@ def run():
             case _:
                 print("Option non valide")
 
+
 annuaire_telephonique = chargement_contacts()
 run()
