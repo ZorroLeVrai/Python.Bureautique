@@ -10,7 +10,7 @@ def lire_secret():
         return fichier.read()
 
 
-def ecriture_secret(secret):
+def ecrire_secret(secret):
     with open(nom_fichier, "w") as fichier:
         fichier.write(secret)
 
@@ -29,7 +29,7 @@ while True:
         case "2":
             secret = input("Saisir le secret: ")
         case "3":
-            ecriture_secret(secret)
+            ecrire_secret(secret)
             print ("Au revoir")
             break
 
