@@ -1,2 +1,2 @@
-nom = "World"
-print("Hello", nom)     #Hello World
+message = "texte"
+print("Hello", message)     #Hello World
