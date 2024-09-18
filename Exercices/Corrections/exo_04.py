@@ -1,8 +1,8 @@
-temp = float(input("Entrez la température de l'eau: "))
+temperature = float(input("Entrez la température de l'eau: "))
 
-if temp < 0:
+if temperature < 0:
     etat_eau = "solide"
-elif temp <= 100:
+elif temperature <= 100:
     etat_eau = "liquide"
 else:
     etat_eau = "gazeux"

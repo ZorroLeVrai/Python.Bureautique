@@ -1,10 +1,10 @@
-nb_max = int(input("Entrez un nombre: "))
+nb_max = int(input("Entrez le nombre maximal: "))
 
-lst = []
-nb_courant = 1
+ma_liste = []
+nombre_courant = 1
 
-while nb_courant <= nb_max:
-    lst.append(nb_courant)
-    nb_courant += 2
+while nombre_courant <= nb_max:
+    ma_liste.append(nombre_courant)
+    nombre_courant += 2
 
-print(lst)
+print(ma_liste)
