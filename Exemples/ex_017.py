@@ -1,5 +1,5 @@
 liste_vide = []
-ma_liste = [2,1,3]
+ma_liste = [2, 1, 3]
 #[2, 1, 3]
 print(ma_liste)
 ma_liste.sort()
