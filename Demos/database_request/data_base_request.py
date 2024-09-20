@@ -1,41 +1,34 @@
-import psycopg2
-from psycopg2 import Error
+import pandas as pd
+from sqlalchemy import create_engine, text
 
-def fetch_users():
-    """Impression de tous les utilisateurs de la table public.utilisateurs."""
-    try:
-        # Paramètres de la connexion
-        db_user = 'postgres'
-        db_password = 'pass123'
-        db_host = '127.0.0.1'
-        db_port = '5432'
-        db_name = 'postgres'
+# Definition des paramètres de connexion à la base de données
+db_username = 'postgres'
+db_password = 'pass123'
+db_host = '127.0.0.1'
+db_port = '5432'
+db_name = 'postgres'
 
-        # Connect to the PostgreSQL database using a context manager
-        with psycopg2.connect(
-            user=db_user,
-            password=db_password,
-            host=db_host,
-            port=db_port,
-            database=db_name
-        ) as connection:
+# Création du moteur SQLAlchemy
+engine = create_engine(f'postgresql+psycopg2://{db_username}:{db_password}@{db_host}:{db_port}/{db_name}')
 
-            # Création d'un objet curseur
-            with connection.cursor() as cursor:
-                select_query = "SELECT * FROM public.utilisateurs;"
-                # Exécution de la requête
-                cursor.execute(select_query)
+# Exécution d'une requête simple
+sql_query = """SELECT ville_nom_reel, ville_departement, ville_code_postal, ville_population_2012
+            FROM public.ville
+            ORDER BY ville_population_2012 DESC
+            LIMIT 10"""
 
-                # Récupération de toutes les données
-                records = cursor.fetchall()
+df_grandes_villes = pd.read_sql(sql_query, engine)
+print("Séléction des plus grandes villes:")
+print(df_grandes_villes)
 
-                # Impression des données de chaque utilisateur
-                for row in records:
-                    print(row)
+# Exécution d'une requête paramètrée
+departement_a_rechercher = "78"
 
-    except (Exception, Error) as error:
-        print(f"Erreur lors de la connexion à PostgreSQL: {error}")
+sql_query = text("""SELECT ville_nom_reel, ville_departement, ville_code_postal, ville_population_2012
+                FROM public.ville
+                WHERE ville_departement = :departement_code""")
+params = {"departement_code": departement_a_rechercher}
+df_villes_departement = pd.read_sql_query(sql_query, engine, params=params)
 
-
-if __name__ == "__main__":
-    fetch_users()
+print(f"Séléction de quelques villes du département {departement_a_rechercher}")
+print(df_villes_departement.head(10))
