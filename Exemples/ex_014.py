@@ -1,3 +1,3 @@
-temperature = float(input("Entrez la température de l'eau: "))
-etat = "solide" if temperature < 0 else ("liquide" if temperature <= 100 else "gazeux")
+nombre = float(input("Entrez un nombre: "))
+etat = "Négatif" if nombre < 0 else "Positif"
 print(etat)
