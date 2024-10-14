@@ -3,7 +3,6 @@ var_float = 3.14
 var_string = "Bonjour"
 var_bool = True
 var_vide = None
-var_int = 42
 
 #Affichage du contenu des variables
 print("var_int:", var_int)          #var_int: 1
