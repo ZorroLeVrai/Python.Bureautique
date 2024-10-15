@@ -1,10 +1,9 @@
-import ex_022_module as mod
-#from ex_022_module import dire_bonjour, PI
+import ex_022_module
 
 # Utilisation de la fonction dire_bonjour
-mod.dire_bonjour("Alice")
+ex_022_module.dire_bonjour("Alice")
 
 # Utilisation de la variable PI
-print(mod.PI)  # Affiche 3.14159
+print(ex_022_module.PI)  # Affiche 3.14159
 
-print(help(mod.dire_bonjour))
+print(help(ex_022_module.dire_bonjour))
