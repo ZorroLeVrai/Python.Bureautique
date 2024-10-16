@@ -28,8 +28,8 @@ def process_word_file(input_path, output_path):
     doc.save(output_path)
 
 
-input_file = 'input.docx'
-output_file = 'output.docx'
+input_file = r"D:\Users\Amine\Prgm\Python\Python.Bureautique\Demos\traitement_fichier_word\input.docx"
+output_file = r"D:\Users\Amine\Prgm\Python\Python.Bureautique\Demos\traitement_fichier_word\output.docx"
 # Transformation du fichier
 process_word_file(input_file, output_file)
 print(f'Le fichier {output_file} a été généré')
