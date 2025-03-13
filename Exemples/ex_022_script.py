@@ -5,5 +5,3 @@ ex_022_module.dire_bonjour("Alice")
 
 # Utilisation de la variable PI
 print(ex_022_module.PI)  # Affiche 3.14159
-
-print(help(ex_022_module.dire_bonjour))

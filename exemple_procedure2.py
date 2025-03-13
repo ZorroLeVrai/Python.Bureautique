@@ -1,4 +1,4 @@
-def afficher_message(message, nb_etoiles = 10):
+def afficher_message(message, nb_etoiles):
     print("*"*nb_etoiles, end="")  # Affiche des étoiles
     print(f" {message} ", end="")    # Affiche un message
     print("*"*nb_etoiles, end="")   # Affiche des étoiles
