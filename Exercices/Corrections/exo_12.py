@@ -9,7 +9,7 @@ def ajouter_produit(titre, prix, stock):
     """Ajout d'un produit dans le fichier CSV"""
     fichier_existe = os.path.exists(nom_fichier)
 
-    with open(nom_fichier, "at", newline="", encoding="latin1") as fichier:
+    with open(nom_fichier, "at", newline="", encoding="utf-8") as fichier:
         csv_writer = csv.writer(fichier, delimiter=delimiteur_csv)
         if not fichier_existe:
             csv_writer.writerow(["Titre", "Prix", "Quantité"])
