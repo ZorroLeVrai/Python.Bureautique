@@ -1,6 +1,6 @@
-def afficher_prenom_nom(prenom, nom):
-    return f"{prenom} {nom}"
+def concatener_prenom_nom(prenom, nom):
+    return f"{prenom.capitalize()} {nom.upper()}"
 
 prenom = input("Entrez votre prénom: ")
 nom = input("Entrez votre nom: ")
-print(afficher_prenom_nom(prenom, nom))
+print(concatener_prenom_nom(prenom, nom))
