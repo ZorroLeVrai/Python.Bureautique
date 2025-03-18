@@ -1,0 +1,4 @@
+Nom	Prénom	Âge	Ville
+Dupont	Jean	28	Paris
+Martin	Sophie	34	Lyon
+Durand	Paul	22	Marseille
